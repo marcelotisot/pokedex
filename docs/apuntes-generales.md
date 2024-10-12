@@ -47,3 +47,17 @@ services:
 ```bash
 docker-compose up -d
 ```
+
+### Generar custom pipe para validar MongoIDS
+
+- Crear modulo common
+```bash
+nest g mo common
+```
+
+- Generar pipe como parte de common
+```bash
+nest g pipe common/pipes/ParseMongoId --no-spec
+```
+
+NOTA: Todos los pipes deben de implementar la interfaz transform
