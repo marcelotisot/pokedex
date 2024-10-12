@@ -16,5 +16,6 @@ import { Pokemon, PokemonSchema } from './schemas/pokemon.schema';
 
   controllers: [PokemonController],
   providers: [PokemonService],
+  exports: [MongooseModule],
 })
 export class PokemonModule {}
