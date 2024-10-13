@@ -3,9 +3,12 @@ import { PokemonService } from './pokemon.service';
 import { PokemonController } from './pokemon.controller';
 import { MongooseModule } from '@nestjs/mongoose';
 import { Pokemon, PokemonSchema } from './schemas/pokemon.schema';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
+    ConfigModule,
+    
     MongooseModule.forFeature([
       { 
         name: Pokemon.name, 

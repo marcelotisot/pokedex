@@ -61,3 +61,17 @@ nest g pipe common/pipes/ParseMongoId --no-spec
 ```
 
 NOTA: Todos los pipes deben de implementar la interfaz transform
+
+
+### Configurar variables de entorno
+
+1. Crear en el root el archivo .env
+
+2. Instalar
+```
+npm i @nestjs/config
+```
+
+3. Importar en el app.module ConfigModule.forRoot()
+NOTA: Debe ir siempre importado arriba
+
