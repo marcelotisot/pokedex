@@ -9,6 +9,13 @@ async function bootstrap() {
     new ValidationPipe({
       whitelist: true, // Solo deja enviar la data que se esta esperando
       forbidNonWhitelisted: true, // Validar que solo lleguen las propiedades esperadas
+
+      // Transformar la informacion que fluya sobre los DTOS
+      transform: true, 
+      transformOptions: {
+        enableImplicitConversion: true
+      }
+      
     })
   )
 
